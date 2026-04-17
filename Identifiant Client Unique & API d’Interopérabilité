@@ -1,0 +1,70 @@
+Use Case 2 – Microfinance
+
+🔗 Identifiant Client Unique & API d’Interopérabilité
+🎯 Objectif
+
+Mettre en place un identifiant client unique et une interopérabilité via API pour fiabiliser les données et obtenir une vision client globale.
+
+1️⃣ Situation actuelle
+
+Plusieurs systèmes indépendants : comptes, crédits, recouvrement, reporting.
+👉 Un client peut avoir plusieurs identifiants.
+👉 Données réparties dans chaque système.
+👉 Aucune communication standardisée.
+
+👉 SI :
+
+Opérationnel (comptes, crédits, recouvrement)
+Décisionnel (reporting)
+2️⃣ Problèmes
+
+❌ Doublons clients
+❌ Données incohérentes
+❌ Mauvais suivi des crédits
+❌ Reporting non fiable
+❌ Risques réglementaires
+
+3️⃣ Master Data
+Donnée	Pourquoi
+ID Client	Identifiant unique
+Nom / Prénom	Identification
+Date de naissance	Vérification
+Agence	Localisation
+Type client	Segmentation
+
+4️⃣ SSOT (Single Source of Truth)
+
+Une base centrale gère l’identité client.
+👉 Seul un service autorisé crée/modifie les clients.
+👉 Cette source devient la référence officielle pour tous les systèmes.
+
+5️⃣ Solution d’harmonisation
+
+⚙️ Principe
+1 client = 1 identifiant unique
+API centrale pour accéder aux données
+Systèmes connectés à l’API
+
+🔄 Étapes
+
+Création client dans la base centrale
+Exposition via API
+Consommation par les systèmes
+🧩 Schéma
+Systèmes (Comptes / Crédit / Recouvrement)
+                |
+              API
+                |
+         Base Client (SSOT)
+6️⃣ Rôle de l’API
+
+L’API permet aux systèmes de partager les mêmes données client en temps réel sans duplication.
+👉 Elle évite les incohérences et assure l’unicité des informations.
+
+7️⃣ Bénéfices
+✅ Vision client 360°
+✅ Données fiables
+✅ Moins d’erreurs
+✅ Meilleur suivi des crédits
+✅ Meilleure décision
+✅ Conformité réglementaire
