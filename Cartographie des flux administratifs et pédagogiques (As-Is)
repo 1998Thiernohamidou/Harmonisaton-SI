@@ -1,0 +1,54 @@
+Use Case 3 – Université
+
+🗺️ Cartographie des flux administratifs et pédagogiques (As-Is)
+🎯 Objectif : 
+
+Analyser le SI actuel de l’université afin d’identifier les flux, les doublons et les incohérences.
+
+1️⃣ Inventaire des applications:
+
+| Application            | Service        | Fonction              | Données             |
+| ---------------------- | -------------- | --------------------- | ------------------- |
+| Logiciel d’inscription | Administration | Inscription étudiants | Infos personnelles  |
+| Logiciel de paiement   | Finance        | Gestion des frais     | Paiements           |
+| Plateforme pédagogique | Pédagogie      | Cours et notes        | Notes, matières     |
+| Système RH             | RH             | Gestion du personnel  | Données employés    |
+| Excel                  | Tous services  | Suivi manuel          | Données diverses    |
+| Dossiers papier        | Administration | Archivage             | Documents étudiants |
+
+2️⃣ Cartographie As-Is : 
+Administration → Inscription → Excel → Pédagogie
+        ↓              ↓
+     Finance ← Paiement ← Étudiant
+        ↓
+     Reporting
+3️⃣ Flux d’information:
+| Flux            | Source         | Destination    | Données        |
+| --------------- | -------------- | -------------- | -------------- |
+| Inscription     | Administration | Pédagogie      | Infos étudiant |
+| Paiement        | Étudiant       | Finance        | Frais          |
+| Liste étudiants | Administration | Pédagogie      | Liste          |
+| Notes           | Pédagogie      | Administration | Résultats      |
+| Reporting       | Tous           | Direction      | Statistiques   |
+
+4️⃣ Doublons : 
+
+❌ Données étudiants dans plusieurs systèmes
+❌ Excel + applications officielles
+❌ Dossiers papier + numérique
+5️⃣ Incohérences : 
+
+❌ Étudiant inscrit mais non payé → accès bloqué
+❌ Notes différentes selon systèmes → erreurs
+❌ Montants incohérents → problèmes financiers
+
+6️⃣ Synthèse : 
+
+
+Le SI actuel est fragmenté et non intégré, avec des données dupliquées et peu fiables.
+Les échanges sont souvent manuels, ce qui génère des erreurs, des retards et un manque de visibilité globale.
+👉 Une harmonisation est nécessaire pour centraliser les données, améliorer la communication entre services et fiabiliser la gestion universitaire.
+
+🚀 Conclusion
+
+La cartographie As-Is met en évidence un SI désorganisé, nécessitant une intégration pour améliorer la performance globale.
